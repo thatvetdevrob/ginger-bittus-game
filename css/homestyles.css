@@ -1,0 +1,305 @@
+/* CSS */
+
+/* 
+grey: #8c8c8c;
+white: #f2f2f2;
+$new-york-pink: rgba(231, 143, 142, 1);
+$cadet-blue: rgba(124, 180, 184, 1);
+pink: #f374a1;
+
+For body pattern i used http://www.patternify.com/ and created the boned on a 10 by 10 grid.
+
+Based on Marina Ferreira's game tutorial: https://marina-ferreira.github.io/projects/js/memory-game/
+
+Buttons from: https://fdossena.com/?p=html5cool/buttons/i.frag
+
+Stars by Anastasia Goodwin
+
+Thanks guys, were it not for everyone i would have a very sucky game * WAGS <3 *
+
+*/
+
+
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+
+  height: 100vh;
+  display: flex;
+  color: #f374a1;
+}
+
+
+/* Index Styles  */
+
+#intro-to {
+  font-family: 'Pacifico', cursive;
+  width: 640px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  background-color:transparent;
+  position: relative;
+  border: solid #8c8c8c 5px;
+  border-radius: 10%;
+  overflow: hidden;
+  margin-top: 9%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+#top-left-intro{
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  height: 295px;
+  background-color:transparent;
+}
+
+#name{
+  position: absolute;
+  left: 0; top: 7%; right: 0;
+}
+
+#megapic{
+  border-radius: 50%;
+  position: absolute;
+  background-color:transparent;
+  height: 10em;
+  width: 10em;
+  z-index: 9;
+  margin: auto;
+  padding: 10%;
+  left: 0; bottom: 0; right: 0;
+  background: url(../img/megaicon.jpeg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 110% 110%;
+  border: solid 5px #8c8c8c;
+}
+
+h1{
+  font-size: xx-large;
+}
+
+h3{
+  font-size: large;
+}
+
+p{
+  font-size: small;
+}
+
+#top-right-intro{
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  height: 295px;
+  right: 0;
+  background-color:transparent;
+
+}
+
+
+#intro{
+  margin-top: 18%;
+  margin-bottom: 3%;
+}
+
+#intro-text{
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  left: 0; bottom: 8%; right: 0;
+}
+
+#bottom-intro{
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  height: auto;
+  bottom: 10%;
+  background-color:transparent;
+}
+
+#link-container{
+  margin-top: 9%;
+  display: inline-block;
+}
+
+a.button2{
+  display: block;
+  padding:0.5em 3em;
+    border:0.16em solid #f374a1;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#f374a1;
+    text-align:center;
+    transition: all 0.15s;
+    }
+  
+    a.button2:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+    background-color: red;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    }
+    a.button2:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+    }
+  
+    @media all and (max-width:30em){
+    â€ƒa.button2{
+    display:block;
+    margin:0.4em auto;};
+    }
+  
+  
+  @keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+   43%{top:-0.9em}
+   46%{top:0em}
+   48%{top:-0.4em}
+   50%{top:0em}
+   100%{top:0em;}  
+  } 
+
+  
+  .share-button {
+    display: block;
+    padding:0.5em 3em;
+      border:0.16em solid #f374a1;
+      margin:0 0.3em 0.3em 0;
+      box-sizing: border-box;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-family:'Roboto',sans-serif;
+      font-weight:400;
+      color:#f374a1;
+      text-align:center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .3s linear;
+    left: 0; bottom: 0; right: 0; top: 0;
+  }
+  .share-button:hover{
+    transform: scale(1.1);
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+  .share-button span{
+    font-family: 'Roboto',sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    font-weight: 400;
+    color: #f374a1;
+    text-align: center;
+    z-index: 999;
+    transition: .6s linear;
+    margin-left: -12%;
+    margin-top: 1%;
+  }
+  .share-button:hover span{
+    transform: translateX(-100%);
+    transition-delay: .3s;
+  }
+  .share-button a {
+    flex: 1;
+    font-size: 26px;
+    margin-right: 20px;
+    color: #2d3436;
+    text-align: center;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: .3s linear;
+  }
+  .share-button:hover a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .share-button a:nth-of-type(1){
+    transition-delay: 1s;
+  }
+  .share-button a:nth-of-type(2){
+    transition-delay: .8s;
+  }
+  .share-button a:nth-of-type(3){
+    transition-delay: .6s;
+  }
+  .share-button a:nth-of-type(4){
+    transition-delay: .4s;
+  }
+  
+  
+ /* Style all font awesome icons */
+ .fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Send Email */
+.fa-envelope-open-o {
+  background: black;
+  color: white;
+  
+}
+
+/* add on ig */
+.fa-instagram {
+  background: black;
+  color: rgb(255, 0, 0);
+  
+}
+
+/* github */
+.fa-github {
+  background: black;
+  color: rgb(255, 0, 255);
+  
+}
+
+/* linkedin */
+.fa-linkedin-square {
+  background: black;
+  color: rgb(0, 110, 255);
+  
+}
+
+/* STARS */
+

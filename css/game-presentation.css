@@ -1,0 +1,146 @@
+/* CSS */
+
+/* 
+$black-coral: rgba(92, 93, 103, 1);
+$banana-mania: rgba(247, 227, 175, 1);
+$new-york-pink: rgba(231, 143, 142, 1);
+$cadet-blue: rgba(124, 180, 184, 1);
+$cherry-blossom-pink: rgba(255, 183, 195, 1);
+
+For body pattern i used http://www.patternify.com/ and created the boned on a 10 by 10 grid.
+
+Based on Marina Ferreira's game tutorial: https://marina-ferreira.github.io/projects/js/memory-game/
+
+Buttons from: https://fdossena.com/?p=html5cool/buttons/i.frag
+
+Stars by Nicolas Gallagher 
+
+Thanks guys, were it not for everyone i would have a very sucky game * WAGS <3 *
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  height: 100vh;
+  display: flex;
+  color: #f374a1;
+}
+
+
+h1{
+  font-size: xx-large;
+}
+
+h3{
+  font-size: large;
+}
+
+p{
+  font-size: small;
+}
+
+#memory-game-intro{
+position: relative;
+color: white;
+display: inline-block;
+text-align: center;
+font-family: 'Permanent Marker', cursive;
+}
+
+.memory-game-intro{
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  background-color: transparent;
+}
+
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+
+a.button2{
+  display: block;
+  padding:0.5em 3em;
+    border:0.16em solid #f374a1;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#f374a1;
+    text-align:center;
+    transition: all 0.15s;
+    }
+  
+    a.button2:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+    background-color: red;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    }
+    a.button2:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+    }
+  
+    @media all and (max-width:30em){
+    â€ƒa.button2{
+    display:block;
+    margin:0.4em auto;};
+    }
+  
+
+
+    button.button2{
+      background-color: transparent;
+      display: inline;
+      padding:0.5em 3em;
+        border:0.16em solid white;
+        margin:0 0.3em 0.3em 0;
+        box-sizing: border-box;
+        text-decoration:none;
+        text-transform:uppercase;
+        font-family:'Roboto',sans-serif;
+        font-weight:400;
+        color:white;
+        text-align:center;
+        transition: all 0.15s;
+        }
+      
+        button.button2:hover{
+        color:#DDDDDD;
+        border-color:#DDDDDD;
+        background-color: red;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        }
+        button.button2:active{
+        color:#BBBBBB;
+        border-color:#BBBBBB;
+        }
+      
+        @media all and (max-width:30em){
+        â€ƒbutton.button2{
+        display:block;
+        margin:0.4em auto;};
+        }
+      
